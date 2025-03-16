@@ -51,7 +51,7 @@ app.get('/gemini', async (req, res) => {
   }
 });
 
-app.get('/api/gemini', upload.single('img_pdf'), async (req, res) => {
+app.post('/api/gemini', upload.single('img_pdf'), async (req, res) => {
   try {
     const { prompt, uid } = req.query;
     const file = req.file;
